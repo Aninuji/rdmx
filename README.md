@@ -1,0 +1,2 @@
+# rdmx
+terraform proyect
