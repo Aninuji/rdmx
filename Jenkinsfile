@@ -13,15 +13,16 @@ pipeline {
        
         stage('Validate') {
             steps {
-                sh "terraform destroy"
+                sh "terraform destroy -auto-aprove"
+            }
+        }
+        
+        stage('Plan') {
+            steps {
+                sh 'yes'
             }
         }
         /*
-        stage('Plan') {
-            steps {
-                sh 'terraform plan -out=demo.plan'
-            }
-        }
         stage('Apply') {
             steps {
                 sh "terraform apply demo.plan"
