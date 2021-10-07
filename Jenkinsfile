@@ -13,7 +13,7 @@ pipeline {
        
         stage('Validate') {
             steps {
-                sh "terraform validate"
+                sh "terraform destroy"
             }
         }
         /*
