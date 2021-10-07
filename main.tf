@@ -222,7 +222,17 @@ module "metric_alarm_scale_in" {
 resource "aws_sns_topic_subscription" "user_updates_sqs_target" {
   topic_arn = aws_sns_topic.user_updates.arn
   protocol  = "email"
-  endpoint  = "mariost1995@hotmail.com"
+  endpoint  = var.subcriptions_email1
+}
+resource "aws_sns_topic_subscription" "user_updates_sqs_target2" {
+  topic_arn = aws_sns_topic.user_updates.arn
+  protocol  = "email"
+  endpoint  = var.subcriptions_email2
+}
+resource "aws_sns_topic_subscription" "user_updates_sqs_target3" {
+  topic_arn = aws_sns_topic.user_updates.arn
+  protocol  = "email"
+  endpoint  = var.subcriptions_email3
 }
 resource "aws_autoscaling_policy" "scale-in" {
   name                   = "scale-in-policy"

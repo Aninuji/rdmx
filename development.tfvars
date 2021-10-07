@@ -1,1 +1,0 @@
-subcriptions_emails = ["mariost1995@hotmail.com"]

@@ -20,7 +20,17 @@ variable hosted_zone_id{
     type = string
 }
 
-variable subcriptions_emails{
-    default = [ "mariost1995@hotmail.com" ]
-    type = list(string)
+variable subcriptions_email1{
+    default = "mariost1995@hotmail.com"
+    type = string
+}
+
+variable subcriptions_email2{
+    default = "aninuji@gmail.com"
+    type = string
+}
+
+variable subcriptions_email3{
+     default = "Mario_Silva@epam.com"
+    type = string
 }
