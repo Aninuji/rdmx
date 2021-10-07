@@ -150,7 +150,7 @@ module "alb" {
 }
 resource "aws_launch_template" "rdmx-lt" {
   name = "rdmx-lt"
-  image_id = "ami-078745025f5acf61e"
+  image_id = var.ami
   instance_type = "t2.micro"
   monitoring {
     enabled = true
@@ -230,8 +230,8 @@ resource "aws_autoscaling_policy" "scale-in" {
   adjustment_type        = "ChangeInCapacity"
   cooldown               = 300
   autoscaling_group_name = aws_autoscaling_group.rdmx-asg.name
-
 }
+
 resource "aws_autoscaling_policy" "scale-out" {
   name                   = "scale-out-policy"
   scaling_adjustment     = 1
@@ -251,3 +251,4 @@ resource "aws_route53_record" "www" {
     evaluate_target_health = true
   }
 }
+
