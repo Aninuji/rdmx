@@ -239,16 +239,15 @@ resource "aws_autoscaling_policy" "scale-out" {
   cooldown               = 300
   autoscaling_group_name = aws_autoscaling_group.rdmx-asg.name
 }
-/*
+
 resource "aws_route53_record" "www" {
   zone_id = var.hosted_zone
   name    = var.hosted_zone
   type    = "A"
 
   alias {
-    name                   = aws_elb.main.dns_name
-    zone_id                = aws_elb.main.zone_id
+    name                   = module.alb.lb_dns_name
+    zone_id                = module.alb.lb_zone_id
     evaluate_target_health = true
   }
 }
-*/
