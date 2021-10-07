@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('First stage') {
+        stage('Init') {
             steps {
                 sh "terraform init"
                 //sh "terraform destroy"
@@ -10,17 +10,17 @@ pipeline {
                 //HOLIWIWSSDASD
             }
         }
-        stage('second stage') {
+        stage('Validate') {
             steps {
                 sh "terraform validate"
             }
         }
-        stage('third stage') {
+        stage('Plan') {
             steps {
                 sh 'terraform plan -out=demo.plan'
             }
         }
-        stage('Fourth stage') {
+        stage('Apply') {
             steps {
                 sh "terraform apply demo.plan"
             }
