@@ -21,16 +21,16 @@ variable hosted_zone_id{
 }
 
 variable subcriptions_email1{
-    default = "mariost1995@hotmail.com"
+    default = "manuel_marquez@epam.com"
     type = string
 }
 
 variable subcriptions_email2{
-    default = "aninuji@gmail.com"
+    default = "galo_viteri@epam.com"
     type = string
 }
 
 variable subcriptions_email3{
-     default = "Mario_Silva@epam.com"
+     default = "abraham_andrade@epam.com"
     type = string
 }
