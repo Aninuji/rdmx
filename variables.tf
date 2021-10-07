@@ -4,7 +4,7 @@ variable region {
 }
 variable proyect_name {
     default = "rdmx"
-    type = "string"
+    type = string
 }
 
 variable ami {
