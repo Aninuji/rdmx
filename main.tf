@@ -266,14 +266,14 @@ module "db1" {
   source  = "terraform-aws-modules/rds/aws"
   version = "~> 3.0"
 
-  identifier = "rdmx-db"
+  identifier = "demodb"
 
   engine            = "mysql"
   engine_version    = "5.7.19"
   instance_class    = "db.t2.large"
   allocated_storage = 5
 
-  name     = "rdmx-db"
+  name     = "demodb"
   username = "1234"
   password = "1234"
   port     = "3306"
