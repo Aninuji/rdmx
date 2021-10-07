@@ -241,7 +241,7 @@ resource "aws_autoscaling_policy" "scale-out" {
 }
 
 resource "aws_route53_record" "www" {
-  zone_id = var.hosted_zone
+  zone_id = var.hosted_zone_id
   name    = var.hosted_zone
   type    = "A"
 
